@@ -1,0 +1,28 @@
+# testing backends
+import requests
+
+# Send post rquest with image to server
+url = 'http://127.0.0.1:5000/im_size'
+load_image = open('flask/data/test1.jpg', 'rb')
+my_img = {'image': load_image}
+r = requests.post(url, files=my_img)
+
+# convert server response into JSON format.
+print(r.json())
+
+source .\ocr_pyenv\Scripts\activate.bat
+git clone https://github.com/ultralytics/yolov5 
+
+// Contains flask app:
+// Run in dir: python -m flask Run
+// Files: app.py
+
+// Contains Python WS:
+// ocr_pyenv
+
+pip install Flask
+pip install flask-restful
+pip install pillow
+pip install flask-cors
+
+pip freeze --local > requirements.txt

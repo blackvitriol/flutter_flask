@@ -1,0 +1,35 @@
+// FlutterFlask App: Backend Launch
+// VS Code Project Workspace Launch File
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            // Run Frontend
+            "name": "Frontend",
+            "type": "dart",
+            "request": "launch", 
+            "flutterMode": "debug", //"debug"/"release"
+            "program": "Frontend/ocr_1/lib/main.dart",
+            "deviceId": "chrome"
+        },
+        
+        {   
+            // Run Backend
+            "name": "Backend",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "Backend/flask/app.py",
+                "FLASK_ENV": "development",
+                "FLASK_DEBUG": "0"
+            },
+            "args": [
+                "run",
+                "--no-debugger",
+                "--no-reload"
+            ],
+        },
+    ],
+}

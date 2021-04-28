@@ -1,0 +1,23 @@
+Flutter Frontend MAN 5:30 PM 5-03-2021
+
+Creating a cool frontend for awesome flutter app ;)
+~A7
+
+flutter run -d web-server --web-port 8080 --web-hostname 0.0.0.0
+
+
+To build:
+- Add bottom navigation bars to allow to switch between pages
+- Add TabBar View optionally
+- Add PageView to switch between pages
+- Add widgets to work with data: imageviewer, map
+- Add magix to flutter: animations, sounds,
+
+// Release APK file
+flutter build apk
+
+// Clean project
+flutter clean .
+
+// Load the project
+ flutter pub get

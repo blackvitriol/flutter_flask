@@ -1,0 +1,18 @@
+# Th is A7 dev ws for this project
+git init .
+git commit -m "first commit"
+git add .
+git branch -M main
+git remote add origin https://github.com/blackvitriol/flutter_flask.git
+git push -u origin main
+
+git config --global user.name "blackvitriol"
+git config --global user.email "ahmedmansoor60@gmail.com"
+
+
+# Updating
+git add .
+git commit -m "working CORS"
+git push origin main --force
+
+ git repack -a -d --depth=250 --window=250
