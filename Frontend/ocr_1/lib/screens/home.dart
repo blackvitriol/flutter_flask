@@ -42,11 +42,11 @@ chooseFileUsingImagePicker() async {
 }
 
 Future uploadSelectedFile() async {
-   var api_addr = backend_url+"/im_size";
+   var api_addr = backend_url+"/urdu_ocr";
    print("Trying to upload image to "+api_addr);
     String base64Image = base64Encode(_image);
     response = await dio.post(api_addr, data: {'type': 'ocr_request', 'image': base64Image});
-    BotToast.showText(text:response.toString());
+    BotToast.showText(text:response.data['status'].toString());
 }
 
   @override
@@ -93,7 +93,10 @@ Future uploadSelectedFile() async {
                 // MaterialButton(color: Colors.blue, child: Text("Select File"), onPressed: ()=> chooseFileUsingFilePicker()),
                           ],
               ),
-              MaterialButton(color: Colors.grey, child: Text("Perform Actions"), onPressed: ()=> uploadSelectedFile()),
+              MaterialButton(color: Colors.grey, child: Text("Perform Actions"), onPressed: (){
+                uploadSelectedFile();
+                page_controller.nextPage(duration: Duration(seconds: 1), curve: Curves.easeIn);
+              } ),
               SizedBox(height: 30),
               // Text(fileDescription, style: heading4),
               Container(

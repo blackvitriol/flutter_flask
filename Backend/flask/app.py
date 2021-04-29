@@ -1,6 +1,6 @@
 # Welcome to A7 Flask Backend Server
 import glob, os, sys
-print("A7 Flask Server running !")
+print("🌐📁🅰️7⃣️👨‍💻️🤖 A7 Flask Server running !")
 print("Now running server on directory: ", os.getcwd())
 # print(sys.path)
 
@@ -13,8 +13,8 @@ from io import BytesIO
 import torch
 from datetime import datetime
 
-# model_file = "Backend/flask/Models/yolov5/weights/yasin_ds7_27042021.pt"
-# model = torch.hub.load('ultralytics/yolov5', 'custom', path_or_model=model_file)
+model_file = "Backend/flask/Models/yolov5/weights/yasin_ds7_27042021.pt"
+model = torch.hub.load('ultralytics/yolov5', 'custom', path_or_model=model_file)
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
@@ -54,21 +54,31 @@ def process_image():
 def get_data():
     return app.send_static_file("data.json")
 # /////////////////////////////////////////////////////
-# @app.route("/urdu_ocr", methods=["POST"])
-# def urdu_ocr():
-#     print("Recieved a request !")
-#     file = request.files['image']
-#     img = Image.open(base64.b64decode(file))
-#     img.save('im-received.jpg')
-#     # Image.open("im-received.jpg")
-#     result = model("im-received.jpg")
-#     result = result.pandas().xyxy[0]
-#     rtl_df = result.sort_values(by=['xmax'], ascending=False)
-#     word = rtl_df["name"].tolist()
-#     print(word)
-#     word = "".join(word)
-#     print(word)
-#     return jsonify({'results': word})
+@app.route("/urdu_ocr", methods=["POST"])
+def urdu_ocr():
+    print("Recieved JSON data as bytes in HTTP post request")
+    data = request.get_json()
+    b64enc_img = data['image']
+    req_type = data['type'] # incase of filenames
+    print("Request type: ", req_type)
+    img = Image.open(BytesIO(base64.b64decode(b64enc_img)))
+    img = img.convert('RGB')
+    # some mumbo jumbo because yolo overwrites main file
+    org_file_path = save_location+'original.jpg'
+    img.save(org_file_path)
+    pred_file_path = save_location+'prediction.jpg'
+    img.save(pred_file_path)
+    result = model(pred_file_path)
+    result.save(save_location)
+    result = result.pandas().xyxy[0]
+    rtl_df = result.sort_values(by=['xmax'], ascending=False)
+    word = rtl_df["name"].tolist()
+    print("Found characters from RTL:")
+    print(word)
+    word = "".join(word)
+    print("Combining Word as:")
+    print(word)
+    return jsonify({'results': word, 'status': 'ocr complete ! 🕺'})
 
 app.logger.info("A7 Flask Server Loading complete !")
 
