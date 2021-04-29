@@ -9,8 +9,10 @@ import '../utilities/config.dart';
 import '../utilities/styles.dart';
 import '../components/drawer.dart';
 import '../components/bottom_nav.dart';
+import 'package:path/path.dart';
 import '../components/title_bar.dart';
 import 'package:dio/dio.dart';
+import 'package:bot_toast/bot_toast.dart';
 // import '../../utilities/styles.dart';
 // import '../../utilities/notifications.dart';
 // import '../../utilities/backend_api.dart';
@@ -37,26 +39,14 @@ chooseFileUsingImagePicker() async {
   setState(() {
     _image = selected_image;
   });
-
 }
 
 Future uploadSelectedFile() async {
    var api_addr = backend_url+"/im_size";
    print("Trying to upload image to "+api_addr);
-    //  Convert image bytes to base64
     String base64Image = base64Encode(_image);
-
-    // Create HTTP Multipart POST Request
-    // var request = http.MultipartRequest('POST', Uri.parse(api_addr));
-    // response = await dio.post(api_addr, data: {'type': 'ocr_request', 'image': base64Image});
-    http.post(Uri.parse(api_addr), body: {
-     "image": base64Image,
-   }).then((res) {
-     print(res.statusCode);
-   }).catchError((err) {
-     print(err);
-   });
-
+    response = await dio.post(api_addr, data: {'type': 'ocr_request', 'image': base64Image});
+    BotToast.showText(text:response.toString());
 }
 
   @override
@@ -92,6 +82,7 @@ Future uploadSelectedFile() async {
             ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children:[
               Text('Welcome to the DPE App !', style: heading3),
               Text('DPE currently works on images only.', style: heading5),
@@ -109,7 +100,6 @@ Future uploadSelectedFile() async {
                 height: SizeConfig.screenHeight*0.3,
                 width: SizeConfig.screenWidth*0.3,
                 child: _image == null ? Text('No image selected.'): Image.memory(_image)),
-
                         ],
                       )
                     )  

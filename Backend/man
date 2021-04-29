@@ -10,6 +10,7 @@ r = requests.post(url, files=my_img)
 # convert server response into JSON format.
 print(r.json())
 
+# when using cmd
 source .\ocr_pyenv\Scripts\activate.bat
 git clone https://github.com/ultralytics/yolov5 
 
