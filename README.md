@@ -7,7 +7,8 @@
 ```
 ## Introduction
 A simple FSA to allow users to run images through a neural network.
-<img src=".vscode/dev_ws_overview.gif" width="200" height="300"/>
+<br>
+<img src=".vscode/dev_ws_overview.gif" width="500" height="330"/>
 <br>
 
 ## Getting Started
