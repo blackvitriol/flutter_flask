@@ -21,10 +21,11 @@ This development workspace has been built on VS Code.
 6. They work with each other on localhost. Enjoy ;)
 
 ## Pending:
-- add gifs of main page
-- add gifs of backend running in console isolated
-- add gifs of fronend running in web isolated
+- <del> add gifs of main page </del>
+- <del> add gifs of backend running in console isolated </del>
+- <del> add gifs of fronend running in web isolated </del>
 - add releases: apk & exe
+- add backend func: train network??
    
 ---
 // ~ A7

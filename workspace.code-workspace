@@ -3,11 +3,12 @@
 {
 	"folders": [
 		{
-			"name": "MainOCR",
+			"name": "FlutterFlask",
 			"path": "."
 		}
 	],
 	"settings": {
-		"git.ignoreLimitWarning": true
+		"git.ignoreLimitWarning": true,
+		"dart.flutterSdkPath": "C:\\Users\\ahmed\\Desktop\\AMG\\ABSH\\FSF\\DEV_WS\\flutter_flask\\fluttersdk\\flutter\\bin"
 	}
 }

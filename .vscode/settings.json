@@ -1,4 +1,5 @@
 {
-    "python.pythonPath": "c:\\Users\\Ahmed Mansoor\\Desktop\\flutter_apps_dev\\MainOCR\\PythonEnv\\ocr_pyenv\\Scripts\\python.exe",
-    "python.terminal.activateEnvInCurrentTerminal": true
+    // "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.pythonPath": "C:\\Users\\ahmed\\Desktop\\AMG\\ABSH\\FSF\\DEV_WS\\flutter_flask\\pythonsdk\\Scripts\\python.exe",
+    "dart.flutterSdkPath": "C:\\Users\\ahmed\\Desktop\\AMG\\ABSH\\FSF\\DEV_WS\\flutter_flask\\fluttersdk\\flutter\\bin"
 }

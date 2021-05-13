@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class bottomNav extends StatefulWidget {
@@ -8,9 +6,8 @@ class bottomNav extends StatefulWidget {
 }
 
 class _bottomNavState extends State<bottomNav> {
-
   int _selectedIndex = 0;
-    
+
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
@@ -25,7 +22,7 @@ class _bottomNavState extends State<bottomNav> {
     ),
   ];
 
-    void _onItemTapped(int index) {
+  void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -47,9 +44,6 @@ class _bottomNavState extends State<bottomNav> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped
-      );
+        onTap: _onItemTapped);
   }
 }
-
-

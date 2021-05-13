@@ -10,7 +10,7 @@
             "type": "dart",
             "request": "launch", 
             "flutterMode": "debug", //"debug"/"release"
-            "program": "Frontend/ocr_1/lib/main.dart",
+            "program": "Frontend/flutter/lib/main.dart",
             "deviceId": "chrome"
         },
         

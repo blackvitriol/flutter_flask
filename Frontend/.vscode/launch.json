@@ -5,8 +5,8 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "ocr_1",
-            "cwd": "ocr_1",
+            "name": "Run Frontend",
+            "cwd": "flutter",
             "request": "launch",
             "type": "dart"
         }

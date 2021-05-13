@@ -21,3 +21,6 @@ flutter clean .
 
 // Load the project
  flutter pub get
+
+# Adding Windows support
+start ms-settings:developers
