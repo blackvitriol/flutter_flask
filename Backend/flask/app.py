@@ -13,7 +13,7 @@ from io import BytesIO
 import torch
 from datetime import datetime
 
-model_file = "Backend/flask/Models/yolov5/weights/yasin_ds7_27042021.pt"
+model_file = "Backend/flask/Models/yolov5/weights/mixed120_05052021.pt"
 model = torch.hub.load('ultralytics/yolov5', 'custom', path_or_model=model_file)
 
 app = Flask(__name__)
@@ -68,6 +68,7 @@ def urdu_ocr():
     img.save(org_file_path)
     pred_file_path = save_location+'prediction.jpg'
     img.save(pred_file_path)
+    # Inference on image data
     result = model(pred_file_path)
     result.save(save_location)
     result = result.pandas().xyxy[0]

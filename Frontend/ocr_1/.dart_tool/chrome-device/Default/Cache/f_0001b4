@@ -1,0 +1,331 @@
+define(['dart_sdk', 'packages/bot_toast/src/basis.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/rendering/shifted_box.dart'], (function load__packages__bot_toast__src__toast_widget__attached_dart(dart_sdk, packages__bot_toast__src__basis$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__rendering__shifted_box$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const basis = packages__bot_toast__src__basis$46dart.src__basis;
+  const media_query = packages__flutter__src__widgets__widget_span$46dart.src__widgets__media_query;
+  const shifted_box = packages__flutter__src__rendering__shifted_box$46dart.src__rendering__shifted_box;
+  var attached = Object.create(dart.library);
+  var $replaceAll = dartx.replaceAll;
+  var $replaceFirst = dartx.replaceFirst;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    __Tobool: () => (T.__Tobool = dart.constFn(dart.fnType(core.bool, [], {extraSpace: core.double}, {})))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  var C = [];
+  var I = [
+    "file:///C:/Users/Ahmed%20Mansoor/Desktop/flutter/setup/flutter2/.pub-cache/hosted/pub.dartlang.org/bot_toast-4.0.1/lib/src/toast_widget/attached.dart",
+    "package:bot_toast/src/toast_widget/attached.dart"
+  ];
+  var enableSafeArea$ = dart.privateName(attached, "PositionDelegate.enableSafeArea");
+  var target$ = dart.privateName(attached, "PositionDelegate.target");
+  var verticalOffset$ = dart.privateName(attached, "PositionDelegate.verticalOffset");
+  var horizontalOffset$ = dart.privateName(attached, "PositionDelegate.horizontalOffset");
+  var preferDirection$ = dart.privateName(attached, "PositionDelegate.preferDirection");
+  attached.PositionDelegate = class PositionDelegate extends shifted_box.SingleChildLayoutDelegate {
+    get enableSafeArea() {
+      return this[enableSafeArea$];
+    }
+    set enableSafeArea(value) {
+      super.enableSafeArea = value;
+    }
+    get target() {
+      return this[target$];
+    }
+    set target(value) {
+      super.target = value;
+    }
+    get verticalOffset() {
+      return this[verticalOffset$];
+    }
+    set verticalOffset(value) {
+      super.verticalOffset = value;
+    }
+    get horizontalOffset() {
+      return this[horizontalOffset$];
+    }
+    set horizontalOffset(value) {
+      super.horizontalOffset = value;
+    }
+    get preferDirection() {
+      return this[preferDirection$];
+    }
+    set preferDirection(value) {
+      super.preferDirection = value;
+    }
+    getConstraintsForChild(constraints) {
+      if (constraints == null) dart.nullFailed(I[0], 27, 56, "constraints");
+      return constraints.loosen();
+    }
+    getPositionForChild(size, childSize) {
+      if (size == null) dart.nullFailed(I[0], 31, 35, "size");
+      if (childSize == null) dart.nullFailed(I[0], 31, 46, "childSize");
+      let top = dart.test(this.enableSafeArea) ? new media_query.MediaQueryData.fromWindow(ui.window).padding.top : 0.0;
+      return attached.positionToastBox({containerRect: new ui.Rect.fromLTWH(0.0, top, size.width, dart.notNull(size.height) - dart.notNull(top)), toastSize: childSize, targetRect: this.target, verticalOffset: this.verticalOffset, horizontalOffset: this.horizontalOffset, preferDirection: this.preferDirection});
+    }
+    shouldRelayout(oldDelegate) {
+      attached.PositionDelegate.as(oldDelegate);
+      if (oldDelegate == null) dart.nullFailed(I[0], 45, 40, "oldDelegate");
+      return !dart.equals(this.target, oldDelegate.target) || this.verticalOffset != oldDelegate.verticalOffset || this.preferDirection != oldDelegate.preferDirection;
+    }
+  };
+  (attached.PositionDelegate.new = function(opts) {
+    let t0;
+    let target = opts && 'target' in opts ? opts.target : null;
+    if (target == null) dart.nullFailed(I[0], 10, 22, "target");
+    let verticalOffset = opts && 'verticalOffset' in opts ? opts.verticalOffset : null;
+    if (verticalOffset == null) dart.nullFailed(I[0], 11, 21, "verticalOffset");
+    let horizontalOffset = opts && 'horizontalOffset' in opts ? opts.horizontalOffset : null;
+    if (horizontalOffset == null) dart.nullFailed(I[0], 12, 21, "horizontalOffset");
+    let enableSafeArea = opts && 'enableSafeArea' in opts ? opts.enableSafeArea : true;
+    if (enableSafeArea == null) dart.nullFailed(I[0], 13, 12, "enableSafeArea");
+    let preferDirection = opts && 'preferDirection' in opts ? opts.preferDirection : null;
+    this[target$] = target;
+    this[verticalOffset$] = verticalOffset;
+    this[horizontalOffset$] = horizontalOffset;
+    this[enableSafeArea$] = enableSafeArea;
+    this[preferDirection$] = (t0 = preferDirection, t0 == null ? basis.PreferDirection.topCenter : t0);
+    attached.PositionDelegate.__proto__.new.call(this);
+    ;
+  }).prototype = attached.PositionDelegate.prototype;
+  dart.addTypeTests(attached.PositionDelegate);
+  dart.addTypeCaches(attached.PositionDelegate);
+  dart.setMethodSignature(attached.PositionDelegate, () => ({
+    __proto__: dart.getMethods(attached.PositionDelegate.__proto__),
+    shouldRelayout: dart.fnType(core.bool, [dart.nullable(core.Object)])
+  }));
+  dart.setLibraryUri(attached.PositionDelegate, I[1]);
+  dart.setFieldSignature(attached.PositionDelegate, () => ({
+    __proto__: dart.getFields(attached.PositionDelegate.__proto__),
+    enableSafeArea: dart.finalFieldType(core.bool),
+    target: dart.finalFieldType(ui.Rect),
+    verticalOffset: dart.finalFieldType(core.double),
+    horizontalOffset: dart.finalFieldType(core.double),
+    preferDirection: dart.finalFieldType(basis.PreferDirection)
+  }));
+  attached.positionToastBox = function positionToastBox(opts) {
+    let toastSize = opts && 'toastSize' in opts ? opts.toastSize : null;
+    if (toastSize == null) dart.nullFailed(I[0], 57, 20, "toastSize");
+    let containerRect = opts && 'containerRect' in opts ? opts.containerRect : null;
+    if (containerRect == null) dart.nullFailed(I[0], 58, 19, "containerRect");
+    let targetRect = opts && 'targetRect' in opts ? opts.targetRect : null;
+    if (targetRect == null) dart.nullFailed(I[0], 59, 19, "targetRect");
+    let preferDirection = opts && 'preferDirection' in opts ? opts.preferDirection : null;
+    if (preferDirection == null) dart.nullFailed(I[0], 60, 30, "preferDirection");
+    let verticalOffset = opts && 'verticalOffset' in opts ? opts.verticalOffset : 0;
+    if (verticalOffset == null) dart.nullFailed(I[0], 61, 12, "verticalOffset");
+    let horizontalOffset = opts && 'horizontalOffset' in opts ? opts.horizontalOffset : 0;
+    if (horizontalOffset == null) dart.nullFailed(I[0], 62, 12, "horizontalOffset");
+    if (!(dart.notNull(verticalOffset) >= 0)) dart.assertFailed("verticalOffset must be a positive number", I[0], 63, 10, "verticalOffset >= 0");
+    if (!(dart.notNull(horizontalOffset) >= 0)) dart.assertFailed("horizontalOffset must be a positive number", I[0], 64, 10, "horizontalOffset >= 0");
+    if (!(containerRect != null)) dart.assertFailed(null, I[0], 65, 10, "containerRect != null");
+    if (!(toastSize != null)) dart.assertFailed(null, I[0], 66, 10, "toastSize != null");
+    if (!(targetRect != null)) dart.assertFailed(null, I[0], 67, 10, "targetRect != null");
+    if (!(verticalOffset != null)) dart.assertFailed(null, I[0], 68, 10, "verticalOffset != null");
+    if (!(preferDirection != null)) dart.assertFailed(null, I[0], 69, 10, "preferDirection != null");
+    if (dart.test(containerRect.overlaps(targetRect))) {
+      targetRect = targetRect.intersect(containerRect);
+    } else {
+      targetRect = new ui.Rect.fromLTWH(containerRect.left, containerRect.top, 0.0, 0.0);
+    }
+    function canPlaceTop(opts) {
+      let extraSpace = opts && 'extraSpace' in opts ? opts.extraSpace : 0;
+      if (extraSpace == null) dart.nullFailed(I[0], 77, 28, "extraSpace");
+      return dart.notNull(toastSize.height) + dart.notNull(verticalOffset) < dart.notNull(targetRect.top) - dart.notNull(containerRect.top) + dart.notNull(extraSpace);
+    }
+    dart.fn(canPlaceTop, T.__Tobool());
+    function canPlaceBottom(opts) {
+      let extraSpace = opts && 'extraSpace' in opts ? opts.extraSpace : 0;
+      if (extraSpace == null) dart.nullFailed(I[0], 82, 31, "extraSpace");
+      return dart.notNull(toastSize.height) + dart.notNull(verticalOffset) < dart.notNull(containerRect.bottom) - dart.notNull(targetRect.bottom) + dart.notNull(extraSpace);
+    }
+    dart.fn(canPlaceBottom, T.__Tobool());
+    function canPlaceLeft(opts) {
+      let extraSpace = opts && 'extraSpace' in opts ? opts.extraSpace : 0;
+      if (extraSpace == null) dart.nullFailed(I[0], 87, 29, "extraSpace");
+      return dart.notNull(toastSize.width) + dart.notNull(horizontalOffset) < dart.notNull(targetRect.left) - dart.notNull(containerRect.left) + dart.notNull(extraSpace);
+    }
+    dart.fn(canPlaceLeft, T.__Tobool());
+    function canPlaceRight(opts) {
+      let extraSpace = opts && 'extraSpace' in opts ? opts.extraSpace : 0;
+      if (extraSpace == null) dart.nullFailed(I[0], 92, 30, "extraSpace");
+      return dart.notNull(toastSize.width) + dart.notNull(horizontalOffset) < dart.notNull(containerRect.right) - dart.notNull(targetRect.right) + dart.notNull(extraSpace);
+    }
+    dart.fn(canPlaceRight, T.__Tobool());
+    let direction = null;
+    if (dart.notNull(preferDirection.index) <= dart.notNull(basis.PreferDirection.topRight.index)) {
+      direction = dart.test(canPlaceTop()) ? "top" : "bottom";
+    } else if (dart.notNull(preferDirection.index) <= dart.notNull(basis.PreferDirection.bottomRight.index)) {
+      direction = dart.test(canPlaceBottom()) ? "bottom" : "top";
+    } else if (dart.notNull(preferDirection.index) <= dart.notNull(basis.PreferDirection.leftBottom.index)) {
+      direction = dart.test(canPlaceLeft()) ? "left" : "right";
+    } else {
+      direction = dart.test(canPlaceRight()) ? "right" : "left";
+    }
+    if (dart.notNull(preferDirection.index) <= dart.notNull(basis.PreferDirection.bottomRight.index)) {
+      switch (attached._getDirection(preferDirection)[$replaceAll]("top", "")[$replaceAll]("bottom", "")) {
+        case "Left":
+        {
+          direction = dart.notNull(direction) + (dart.test(canPlaceRight({extraSpace: targetRect.width})) ? "Left" : dart.test(canPlaceLeft({extraSpace: targetRect.width})) ? "Right" : "Center");
+          break;
+        }
+        case "Center":
+        {
+          direction = dart.notNull(direction) + "Center";
+          break;
+        }
+        case "Right":
+        {
+          direction = dart.notNull(direction) + (dart.test(canPlaceLeft({extraSpace: targetRect.width})) ? "Right" : dart.test(canPlaceRight({extraSpace: targetRect.width})) ? "Left" : "Center");
+          break;
+        }
+      }
+    } else {
+      switch (attached._getDirection(preferDirection)[$replaceAll]("left", "")[$replaceAll]("right", "")) {
+        case "Top":
+        {
+          direction = dart.notNull(direction) + (dart.test(canPlaceBottom({extraSpace: targetRect.height})) ? "Top" : dart.test(canPlaceTop({extraSpace: targetRect.height})) ? "Bottom" : "Center");
+          break;
+        }
+        case "Center":
+        {
+          direction = dart.notNull(direction) + "Center";
+          break;
+        }
+        case "Bottom":
+        {
+          direction = dart.notNull(direction) + (dart.test(canPlaceTop({extraSpace: targetRect.height})) ? "Bottom" : dart.test(canPlaceBottom({extraSpace: targetRect.height})) ? "Top" : "Center");
+          break;
+        }
+      }
+    }
+    let resultOffset = ui.Offset.zero;
+    switch (direction) {
+      case "topLeft":
+      {
+        resultOffset = targetRect.topLeft['-'](new ui.Offset.new(0.0, toastSize.height))['+'](new ui.Offset.new(horizontalOffset, -dart.notNull(verticalOffset)));
+        break;
+      }
+      case "topCenter":
+      {
+        let rightOverflow = dart.notNull(toastSize.width) / 2 > dart.notNull(containerRect.right) - dart.notNull(targetRect.topCenter.dx);
+        let leftOverflow = dart.notNull(toastSize.width) / 2 > dart.notNull(targetRect.topCenter.dx) - dart.notNull(containerRect.left);
+        if (rightOverflow && !leftOverflow) {
+          resultOffset = new ui.Offset.new(dart.notNull(containerRect.right) - dart.notNull(toastSize.width), dart.notNull(targetRect.top) - dart.notNull(toastSize.height));
+        } else if (leftOverflow && !rightOverflow) {
+          resultOffset = new ui.Offset.new(containerRect.left, dart.notNull(targetRect.top) - dart.notNull(toastSize.height));
+        } else {
+          resultOffset = targetRect.topCenter['-'](new ui.Offset.new(dart.notNull(toastSize.width) / 2, toastSize.height));
+        }
+        resultOffset = resultOffset['+'](new ui.Offset.new(0.0, -dart.notNull(verticalOffset)));
+        break;
+      }
+      case "topRight":
+      {
+        resultOffset = targetRect.topRight['-'](new ui.Offset.new(toastSize.width, toastSize.height))['+'](new ui.Offset.new(-dart.notNull(horizontalOffset), -dart.notNull(verticalOffset)));
+        break;
+      }
+      case "bottomLeft":
+      {
+        resultOffset = targetRect.bottomLeft['+'](new ui.Offset.new(horizontalOffset, verticalOffset));
+        break;
+      }
+      case "bottomCenter":
+      {
+        let rightOverflow = dart.notNull(toastSize.width) / 2 > dart.notNull(containerRect.right) - dart.notNull(targetRect.topCenter.dx);
+        let leftOverflow = dart.notNull(toastSize.width) / 2 > dart.notNull(targetRect.topCenter.dx) - dart.notNull(containerRect.left);
+        if (rightOverflow && !leftOverflow) {
+          resultOffset = new ui.Offset.new(dart.notNull(containerRect.right) - dart.notNull(toastSize.width), targetRect.bottom);
+        } else if (leftOverflow && !rightOverflow) {
+          resultOffset = new ui.Offset.new(containerRect.left, targetRect.bottom);
+        } else {
+          resultOffset = targetRect.bottomCenter['-'](new ui.Offset.new(dart.notNull(toastSize.width) / 2, 0.0));
+        }
+        resultOffset = resultOffset['+'](new ui.Offset.new(0.0, verticalOffset));
+        break;
+      }
+      case "bottomRight":
+      {
+        resultOffset = targetRect.bottomRight['-'](new ui.Offset.new(toastSize.width, 0.0))['+'](new ui.Offset.new(-dart.notNull(horizontalOffset), verticalOffset));
+        break;
+      }
+      case "leftTop":
+      {
+        resultOffset = targetRect.topLeft['-'](new ui.Offset.new(toastSize.width, 0.0))['+'](new ui.Offset.new(-dart.notNull(horizontalOffset), verticalOffset));
+        break;
+      }
+      case "leftCenter":
+      {
+        let topOverflow = dart.notNull(toastSize.height) / 2 > dart.notNull(targetRect.centerLeft.dy) - dart.notNull(containerRect.top);
+        let bottomOverflow = dart.notNull(toastSize.height) / 2 > dart.notNull(containerRect.bottom) - dart.notNull(targetRect.centerLeft.dy);
+        if (topOverflow && !bottomOverflow) {
+          resultOffset = new ui.Offset.new(dart.notNull(targetRect.left) - dart.notNull(toastSize.width), containerRect.top);
+        } else if (bottomOverflow && !topOverflow) {
+          resultOffset = new ui.Offset.new(dart.notNull(targetRect.left) - dart.notNull(toastSize.width), dart.notNull(containerRect.bottom) - dart.notNull(toastSize.height));
+        } else {
+          resultOffset = targetRect.centerLeft['-'](new ui.Offset.new(toastSize.width, dart.notNull(toastSize.height) / 2));
+        }
+        resultOffset = resultOffset['+'](new ui.Offset.new(-dart.notNull(horizontalOffset), 0.0));
+        break;
+      }
+      case "leftBottom":
+      {
+        resultOffset = targetRect.bottomLeft['-'](new ui.Offset.new(toastSize.width, toastSize.height))['+'](new ui.Offset.new(-dart.notNull(horizontalOffset), -dart.notNull(verticalOffset)));
+        break;
+      }
+      case "rightTop":
+      {
+        resultOffset = targetRect.topRight['+'](new ui.Offset.new(horizontalOffset, verticalOffset));
+        break;
+      }
+      case "rightCenter":
+      {
+        let topOverflow = dart.notNull(toastSize.height) / 2 > dart.notNull(targetRect.centerLeft.dy) - dart.notNull(containerRect.top);
+        let bottomOverflow = dart.notNull(toastSize.height) / 2 > dart.notNull(containerRect.bottom) - dart.notNull(targetRect.centerLeft.dy);
+        if (topOverflow && !bottomOverflow) {
+          resultOffset = new ui.Offset.new(targetRect.right, containerRect.top);
+        } else if (bottomOverflow && !topOverflow) {
+          resultOffset = new ui.Offset.new(targetRect.right, dart.notNull(containerRect.bottom) - dart.notNull(toastSize.height));
+        } else {
+          resultOffset = targetRect.centerRight['-'](new ui.Offset.new(0.0, dart.notNull(toastSize.height) / 2));
+        }
+        resultOffset = resultOffset['+'](new ui.Offset.new(horizontalOffset, 0.0));
+        break;
+      }
+      case "rightBottom":
+      {
+        resultOffset = targetRect.bottomRight['-'](new ui.Offset.new(0.0, toastSize.height))['+'](new ui.Offset.new(horizontalOffset, -dart.notNull(verticalOffset)));
+        break;
+      }
+    }
+    return resultOffset;
+  };
+  attached._getDirection = function _getDirection(preferDirection) {
+    if (preferDirection == null) dart.nullFailed(I[0], 280, 38, "preferDirection");
+    return dart.toString(preferDirection)[$replaceFirst]("PreferDirection.", "");
+  };
+  dart.trackLibraries("packages/bot_toast/src/toast_widget/attached.dart", {
+    "package:bot_toast/src/toast_widget/attached.dart": attached
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["attached.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../../../../../packages/bot_toast/src/toast_widget/attached.dart.lib.js"}');
+  // Exports:
+  return {
+    src__toast_widget__attached: attached
+  };
+}));
+
+//# sourceMappingURL=attached.dart.lib.js.map
