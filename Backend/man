@@ -25,5 +25,6 @@ pip install Flask
 pip install flask-restful
 pip install pillow
 pip install flask-cors
+pip install tinydb
 
 pip freeze --local > requirements.txt

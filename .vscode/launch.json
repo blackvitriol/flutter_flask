@@ -10,7 +10,7 @@
             "type": "dart",
             "request": "launch", 
             "flutterMode": "debug", //"debug"/"release"
-            "program": "Frontend/flutter/lib/main.dart",
+            "program": "Frontend/dart/lib/main.dart",
             "deviceId": "chrome"
         },
         
@@ -21,7 +21,7 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "Backend/flask/app.py",
+                "FLASK_APP": "Backend/python/app.py",
                 "FLASK_ENV": "development",
                 "FLASK_DEBUG": "1"
             },

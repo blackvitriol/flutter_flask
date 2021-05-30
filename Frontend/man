@@ -24,3 +24,6 @@ flutter clean .
 
 # Adding Windows support
 start ms-settings:developers
+
+# Add Linux support
+# Add drop down list for selections of actions items such as AI Engine features

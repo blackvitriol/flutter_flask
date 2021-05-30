@@ -9,6 +9,7 @@
 	],
 	"settings": {
 		"git.ignoreLimitWarning": true,
-		"dart.flutterSdkPath": "C:\\Users\\ahmed\\Desktop\\AMG\\ABSH\\FSF\\DEV_WS\\flutter_flask\\fluttersdk\\flutter\\bin"
+		"dart.flutterSdkPath": "C:\\Users\\ahmed\\Desktop\\AMG\\ABSH\\FSF\\DEV_WS\\flutter_flask\\fluttersdk\\flutter\\bin",
+		"python.pythonPath": "c:\\Users\\Ahmed Mansoor\\Desktop\\flutter_apps_dev\\MainOCR\\PythonEnv\\ocr_pyenv\\Scripts\\python.exe"
 	}
 }

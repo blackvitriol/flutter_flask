@@ -21,3 +21,12 @@ git repack -a -d --depth=250 --window=250
 
 # Deploying
 flutter clean .
+
+-- 29 May 2021
+This was a Windows WS b u t :/
+converting to Linux now...
+Ubuntu 18.04 bionic
+
+# Devops
+# create script for releases for web/apk/ios
+# copy new files to releases folder

@@ -1,5 +1,6 @@
+// Linux / Windows FFS switch
 {
-    // "python.terminal.activateEnvInCurrentTerminal": true,
-    "python.pythonPath": "C:\\Users\\ahmed\\Desktop\\AMG\\ABSH\\FSF\\DEV_WS\\flutter_flask\\pythonsdk\\Scripts\\python.exe",
-    "dart.flutterSdkPath": "C:\\Users\\ahmed\\Desktop\\AMG\\ABSH\\FSF\\DEV_WS\\flutter_flask\\fluttersdk\\flutter\\bin"
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.pythonPath": "/home/ahmed/Desktop/UrduOCR/urdu_ocr_py_ws/bin/python",
+    "dart.flutterSdkPath": "/home/ahmed/snap/flutter/common/flutter/bin"
 }
