@@ -5,14 +5,6 @@ Creating a cool frontend for awesome flutter app ;)
 
 flutter run -d web-server --web-port 8080 --web-hostname 0.0.0.0
 
-
-To build:
-- Add bottom navigation bars to allow to switch between pages
-- Add TabBar View optionally
-- Add PageView to switch between pages
-- Add widgets to work with data: imageviewer, map
-- Add magix to flutter: animations, sounds,
-
 // Release APK file
 flutter build apk
 
@@ -22,8 +14,24 @@ flutter clean .
 // Load the project
  flutter pub get
 
+# ======= LOG ================================================
+
 # Adding Windows support
 start ms-settings:developers
 
 # Add Linux support
 # Add drop down list for selections of actions items such as AI Engine features
+
+################################################## 30-05-2021
+# Added Custom Launcher Icons:
+# pubspecy.yaml >> 
+            dev_dependencies:
+            flutter_launcher_icons: "^0.8.0"
+
+            flutter_icons:
+            android: "launcher_icon"
+            ios: true
+            image_path: "resources/images/UrduReader_Icon.png"
+# ~run in console
+flutter pub get
+flutter pub run flutter_launcher_icons:main

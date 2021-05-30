@@ -6,7 +6,9 @@
  Date Modified:  29-04-2021 11:49 PM
 ```
 ## Introduction
-A simple FSA to allow users to run images through a neural network.
+This is the source code for a development workspace of a VSCode project.
+A simple full-stack application is developed to allow users to run images through a neural network.
+The frontend in made on Flutter in Dart and the backend is Flask on Python. 
 <br>
 <img src=".vscode/dev_ws_overview.gif" width="500" height="330"/>
 <br>
@@ -27,5 +29,8 @@ This development workspace has been built on VS Code.
 - add releases: apk & exe
 - add backend func: train network??
    
+
+**UPDATE**
+30-05-2021: Renaming FlutterFlask dirs to Python/Dart for Flutter compat.
 ---
 // ~ A7
